@@ -1,0 +1,56 @@
+/*柱状式*/
+/*可能把名字定义的有问题需要注意*/
+.H5_component_bar  {
+}
+.H5_component_bar .line{
+    height: 15px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 15px;
+}
+.H5_component_bar .name{
+    width: 60px;
+    float: left;
+    color: #000;
+    text-align: center;
+    
+}
+.H5_component_bar  .rate{
+    background: #ccc;
+    height: 15px;
+    float: left;
+    margin-left: 5px;
+    position: relative;
+
+}
+.H5_component_bar  .rate .bg{
+    background: #99c0ff;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+}
+.H5_component_bar  .per {
+    width: 20px;
+    color: #99c0ff;
+    margin-left: 5px;
+    float: left;
+    opacity:0;
+}
+.H5_component_bar_load .rate .bg{
+    -webkit-transition: all 1s .5s;
+    width: 100%;
+}
+.H5_component_bar_leave .rate .bg{
+    width: 0;
+}
+.H5_component_bar_load  .per{
+    -webkit-transition: all 1s 1.5s;
+    opacity:1;
+}
+.H5_component_bar_leave .per{
+    -webkit-transition: all 1s ;
+    opacity:0;
+}

@@ -1,0 +1,26 @@
+/*环图组建样式*/
+/*可能把名字定义的有问题需要注意*/
+.H5_component_ring  {
+    position: relative;
+}
+.H5_component_ring .mask{
+    /* stage3：修正遮罩层的样式，为其添加白色背
+    景颜色，并且设置为完成 圆形饼图的 80% 大小 */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-transform:scale(.8);
+}
+
+.H5_component_ring .text{
+    width: 100%;
+    top: 40%;
+    opacity: 0;
+}
+
+

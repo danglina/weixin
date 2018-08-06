@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/H5.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!--测试内容主旨功能，以及fullpage的页面切换&组建切换-->
+</body>
+<script src="../js/H5.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.fullPage.js"></script>
+<script src="../js/h5Componentbase.js"></script>
+<!--内容组织管理回家再若干个资源-->
+<script>
+    $(function () {
+        var h5 = new H5();
+        h5
+            .addPage('face')
+               .addComponent('logo',{
+                   text:'logo',
+                   width:400,
+                   height:100,
+                   css:{backgroundColor:'pink',top:200,opacity:0,position:'absolute'},
+                   center:true,
+                   animateIn:{opacity:1},
+                   animateOut:{opacity:0}
+               })
+               .addComponent('slogan',{
+                   text:'slogan',
+                   width:395,
+                   height:130,
+                   css:{backgroundColor:'pink',top:350,position:'absolute'},
+                   center:true
+               })
+            .addPage('desc')
+               .addComponent('caption',{
+                   text:'核心理念',
+                   width:400,
+                   height:100,
+                   css:{backgroundColor:'pink',top:200,position:'absolute'},
+                   center:true
+               })
+            .addPage('page-3')
+               .addComponent('caption',{
+                   text:'课程方向分布',
+                   width:400,
+                   height:100,
+                   css:{backgroundColor:'pink',top:200,position:'absolute'},
+                   center:true
+               })
+            .loader();
+    })
+</script>
+</html>

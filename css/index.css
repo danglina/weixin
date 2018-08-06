@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.component{
+    width: 50%;
+    height: 50px;
+    margin-bottom: 10px;
+    background:#fff;
+    background: #ff2a31;
+    display: none;
+    padding-top: 100px;
+}

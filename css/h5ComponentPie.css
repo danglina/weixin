@@ -1,0 +1,28 @@
+/*饼图组建样式*/
+/*可能把名字定义的有问题需要注意*/
+.H5_component_pie  {
+    position: relative;
+}
+.H5_component_pie canvas{
+    /*因为canvas做动画会分为好几几个层,最后z-index*/
+    position: absolute;
+    top: 0;
+    left:0;
+    /*设置成100%，不管你多高多宽最后和组件，原始大小的效果一杨宽
+    这样会压缩canvas，  会在手机显示上图像会更精致，*/
+    width: 100%;
+    height: 100%;
+    /*color: ;*/
+    /*background: rgba(238, 163, 61, 0.47);*/
+}
+
+.H5_component_pie .text{
+    position: absolute;
+   text-align: center;
+    height: 24px;
+    -webkit-transition: all 1s ;
+    z-index: 995;
+    font-size: 12px;
+}
+
+

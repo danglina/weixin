@@ -1,0 +1,56 @@
+/*loading动画样式*/
+body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+}
+.loading{
+    width: 60px;
+    height: 60px;
+    /*background: red;*/
+    position: relative;
+    top: 50%;
+    margin: -30px auto;
+}
+.double-bounce1,.double-bounce2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    left:0;
+    top:0;
+    background: #77f5ff;
+    opacity: 0.6;
+}
+.loading #rate{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    /*//这样做是将他调节到盒子的底部*/
+      top:100%
+}
+.double-bounce1{
+     -webkit-animation:bonus 2s infinite ease-in-out 1s;
+ }
+.double-bounce2{
+    -webkit-animation:bonus2 2s infinite ease-in-out 3s;
+}
+@-webkit-keyframes bonus {
+    0%,100%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes bonus2 {
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0);
+    }
+}

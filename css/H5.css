@@ -1,0 +1,19 @@
+/*H5的全局样式*/
+.h5{
+    width: 100% !important;
+    height: 100% !important;
+    background: blue!important;
+}
+.h5_page{
+    position: relative;
+    width: 100% !important;
+    height: 100% !important;
+    background: #ddd;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.h5_component {
+     background-repeat: no-repeat !important;
+    position: absolute;
+ }
+

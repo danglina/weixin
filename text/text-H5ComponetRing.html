@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <title>党丽娜 H5ComponentPie扩展，环图实现</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        .iphone{
+            width: 340px;
+            height: 540px;
+            background: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -270px;
+            margin-left: -170px;
+            color:black;
+        }
+    </style>
+    <!--公共资源-->
+    <link rel="stylesheet" href="../css/h5Componentbase.css">
+    <!--引入饼图图资源-->
+    <link rel="stylesheet" href="../css/h5ComponentPie.css">
+    <!--引入环图资源-->
+    <link rel="stylesheet" href="../css/h5ComponentRing.css">
+</head>
+<body>
+<div class="iphone">
+</div>
+</body>
+<!--用于开发测试 H5ComponentBar 对象（基与饼图组建）-->
+<!--引入饼图的资源-->
+<script src="../js/h5ComponentPie.js" type="text/javascript"></script>
+<!--引入环图的资源-->
+<script src="../js/h5ComponentRing.js" type="text/javascript"></script>
+<!--这是引入公共资源-->
+<script src="../js/h5Componentbase.js" type="text/javascript"></script>
+<script src="../js/jquery.min.js"></script>
+<script>
+    var cfg = {
+        type :'ring',
+        width:400,
+        height:400,
+        data:[
+            ['JS' ,.80 , 'green']
+        ],
+        css:{
+            top:100,
+            opacity:0
+        },
+        animateIn:{
+            top:200,
+            opacity:1
+        },
+        animateOut:{
+            top:100,
+            opacity:0
+        },
+        center : true
+    }
+    var leave = true;
+    $('body').click(function () {
+        leave = !leave;
+        // 通过控制true and false来判断trigger
+        $('.h5_component').trigger(leave ? 'onLeave':'onLoad');
+    })
+
+    var H5 = new H5componentRing('myBarComponent',cfg);//这个时候就已经变成了一个dom元素
+    $('.iphone').append(H5);
+</script>
+</html>
